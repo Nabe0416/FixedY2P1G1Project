@@ -98,4 +98,14 @@ public class EnemyAI : MonoBehaviour
         print(this.gameObject + " is dead.");
         this.gameObject.SetActive(false);
     }
+
+    public ViewRange GetViewRange()
+    {
+        return vr;
+    }
+
+    public HearRange GetHearRange()
+    {
+        return hr;
+    }
 }

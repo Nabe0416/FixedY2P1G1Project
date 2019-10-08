@@ -89,7 +89,7 @@ public class ThrowableGameObj : MonoBehaviour
             {
                 var sSrc = Instantiate(soundsrc, this.transform.position, Quaternion.identity);
 
-                print(go + " is attracted by " + item.name);
+                print(go.transform.parent.transform.parent + " is attracted by " + item.name);
                 //go.GetComponent<HearRange>
             }
         }

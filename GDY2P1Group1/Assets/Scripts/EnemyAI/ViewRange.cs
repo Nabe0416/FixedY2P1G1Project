@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEditor;
 
 public class ViewRange : MonoBehaviour
 {
@@ -10,6 +11,17 @@ public class ViewRange : MonoBehaviour
     private GameObject pc;
     private GameObject tilemap;
 
+    private CapsuleCollider2D range;
+
+    [SerializeField]
+    private float offsetYLM = 2.979516f;
+    [SerializeField]
+    private float sizeYLM = 8f;
+    [SerializeField]
+    private float offsetYDM = 2.125477f;
+    [SerializeField]
+    private float sizeYDM = 6f;
+
     private List<GameObject> list = new List<GameObject>();
 
     private void Start()
@@ -17,6 +29,7 @@ public class ViewRange : MonoBehaviour
         #region Refs.
         pc = FindObjectOfType<CharacterMovement>().gameObject;
         tilemap = FindObjectOfType<Tilemap>().gameObject;
+        range = GetComponent<CapsuleCollider2D>();
         #endregion
     }
 
@@ -52,5 +65,21 @@ public class ViewRange : MonoBehaviour
     {
         ai.SeePlayerAt(null);
         ai.pcIsInView = false;
+    }
+
+    [ContextMenu("Set view range to L mode")]
+    public void SetToLightMode()
+    {
+        range.offset = new Vector2(0.04632092f, offsetYLM);
+        range.size = new Vector2(5, sizeYLM);
+        print("Lm");
+    }
+
+    [ContextMenu("Set view range to D mode")]
+    public void SetToDarkMode()
+    {
+        range.offset = new Vector2(0.04632092f, offsetYDM);
+        range.size = new Vector2(5, sizeYDM);
+        print("Dm");
     }
 }
