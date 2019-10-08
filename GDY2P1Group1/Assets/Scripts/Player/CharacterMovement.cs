@@ -52,7 +52,13 @@ public class CharacterMovement : MonoBehaviour
         float y = Input.GetAxis("Vertical");
 
         rb.MovePosition((Vector2)this.transform.position + new Vector2(x, y) * MoveSpeed * Time.deltaTime);
-        
+
+        if(x<=0.25&&x>=-0.25&&y<=0.25&&y>=-0.25){
+            characterSprite.GetComponent<Animator>().SetBool("Moving", false);
+        }else{
+            characterSprite.GetComponent<Animator>().SetBool("Moving", true);
+        };
+
     }
     #endregion
 
