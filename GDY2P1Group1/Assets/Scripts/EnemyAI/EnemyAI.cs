@@ -22,12 +22,16 @@ public class EnemyAI : MonoBehaviour
 
     [SerializeField]
     private Transform lastSeenPos;
+    private bool Stunned = false;
+    private int StunnedSeconds;
+    private float timer = 0.0f;
 
     [SerializeField]
     private int Hitpoint;
     private int HitpointMax = 10;
 
     public bool WantToSwitchLight = false;
+
 
     [SerializeField]
     private bool StaticGuard = true;
@@ -60,7 +64,7 @@ public class EnemyAI : MonoBehaviour
         {
             pcIsInView = false;
         }
-
+        IsStunned();
         CheckHP();
         //ReturnGuardingPos();
     }
@@ -101,6 +105,30 @@ public class EnemyAI : MonoBehaviour
         Hitpoint -= value;
     }
 
+    public void StunEnemy()
+    {
+        Debug.Log("stun enemy, view to null");
+        Stunned = true;
+        StunnedSeconds = 5;
+        timer = 0.0f;
+
+
+    }
+    private void IsStunned()
+    {
+        if (Stunned)
+        {
+            GetComponent<AIPath>().isStopped = true; //cant walk while stunned
+
+            timer += Time.deltaTime;
+            if (timer > StunnedSeconds)
+            {
+                timer -= StunnedSeconds;
+                Stunned = false;
+                GetComponent<AIPath>().isStopped = false;
+            }
+        }
+    }
     private void CheckHP()
     {
         if(Hitpoint <= 0)

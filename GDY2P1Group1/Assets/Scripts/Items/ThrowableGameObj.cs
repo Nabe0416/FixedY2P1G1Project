@@ -60,6 +60,11 @@ public class ThrowableGameObj : MonoBehaviour
             {
                 ThrowableItem tItem = (ThrowableItem)item;
                 Hurt(collision.gameObject.GetComponent<EnemyAI>(), (int)tItem.damage);
+                if (tItem.instaKill == false)
+                {
+                    Debug.Log("not instakill, stun enemy");
+                    collision.gameObject.GetComponent<EnemyAI>().StunEnemy();
+                }
                 print(collision.gameObject + " is hurt by " + tItem.name + ", the dmg is " + tItem.damage);
             }
         }
