@@ -72,7 +72,7 @@ public class ViewRange : MonoBehaviour
     {
         range.offset = new Vector2(0.04632092f, offsetYLM);
         range.size = new Vector2(5, sizeYLM);
-        print("Lm");
+        //print("Lm");
     }
 
     [ContextMenu("Set view range to D mode")]
@@ -80,6 +80,6 @@ public class ViewRange : MonoBehaviour
     {
         range.offset = new Vector2(0.04632092f, offsetYDM);
         range.size = new Vector2(5, sizeYDM);
-        print("Dm");
+        //print("Dm");
     }
 }

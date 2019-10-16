@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3387335777458147921}
-  - component: {fileID: 3387335777458147920}
+  - component: {fileID: 2105347215}
   m_Layer: 0
   m_Name: LightManager
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3387335777458147920
+--- !u!114 &2105347215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,7 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd67b533dd49bb4cb26aa4b901c6fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LightOn: 0
+  LightOn: 1
   pcSr: {fileID: 0}
   darkM: {fileID: 2100000, guid: 252fb49aed582cc408b7ee8ae5d6d24b, type: 2}
   normM: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  enemiesList: []

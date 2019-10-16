@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Pathfinding;
+using System;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -26,11 +27,25 @@ public class EnemyAI : MonoBehaviour
     private int Hitpoint;
     private int HitpointMax = 10;
 
+    public bool WantToSwitchLight = false;
+
+    [SerializeField]
+    private bool StaticGuard = true;
+    [SerializeField]
+    private Transform guardingPos;
+    [SerializeField]
+    private List<Transform> wayPoints = new List<Transform>();
+
+    public bool AchievedDes = false;
+
+    private AIDestinationSetter setter;
+
     private void Start()
     {
         #region Refs.
         pc = FindObjectOfType<CharacterMovement>().gameObject;
         tilemap = FindObjectOfType<Tilemap>().gameObject;
+        setter = GetComponent<AIDestinationSetter>();
         #endregion
         Hitpoint = HitpointMax;
     }
@@ -47,6 +62,7 @@ public class EnemyAI : MonoBehaviour
         }
 
         CheckHP();
+        //ReturnGuardingPos();
     }
 
     public void SeePlayerAt(Transform pos)
@@ -54,7 +70,7 @@ public class EnemyAI : MonoBehaviour
         if(hearPos) Destroy(hearPos.gameObject);
         viewPos = pos;
         if (pcIsInView) ChasePlayerMode();
-        GetComponent<AIDestinationSetter>().target = viewPos;
+        setter.target = viewPos;
 
     }
 
@@ -62,7 +78,7 @@ public class EnemyAI : MonoBehaviour
     {
         hearPos = pos;
         SearchMode();
-        if (!pcIsInView) GetComponent<AIDestinationSetter>().target = hearPos;
+        if (!pcIsInView) setter.target = hearPos;
     }
 
     public void ShootPlayer()
@@ -107,5 +123,31 @@ public class EnemyAI : MonoBehaviour
     public HearRange GetHearRange()
     {
         return hr;
+    }
+
+    public void InformLight(Transform pos)
+    {
+        if(!pcIsInView)
+        {
+            WantToSwitchLight = true;
+            ChasePlayerMode();
+            setter.target = pos;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.GetComponent<LightSwitch>())
+        {
+            if(WantToSwitchLight)
+            {
+                WantToSwitchLight = false;
+            }
+        }
+    }
+
+    private void ReturnGuardingPos()
+    {
+
     }
 }

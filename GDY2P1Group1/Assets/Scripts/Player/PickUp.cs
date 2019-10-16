@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class PickUp : MonoBehaviour
 {
@@ -9,14 +10,22 @@ public class PickUp : MonoBehaviour
     public Item pickup;
     private Sprite icon;
     private SpriteRenderer sr;
-    private GameObject pc;
     private Inventory inv;
+    private Rigidbody2D rb;
+    private CircleCollider2D cldr;
+
+    private LightSystem ls;
+
+    private bool pcInside = false;
 
     private void Start()
     {
         #region Refs.
         inv = FindObjectOfType<Inventory>();
-        pc = FindObjectOfType<CharacterMovement>().gameObject;
+        rb = GetComponent<Rigidbody2D>();
+        cldr = GetComponent<CircleCollider2D>();
+        sr = GetComponent<SpriteRenderer>();
+        sr.material = FindObjectOfType<CharacterMovement>().transform.GetChild(0).GetComponent<SpriteRenderer>().material;
         #endregion
         #region Make the pickup better looking.
         RefreshPickup();
@@ -25,6 +34,7 @@ public class PickUp : MonoBehaviour
 
     public void RefreshPickup()
     {
+        sr = GetComponent<SpriteRenderer>();
         if (pickup != null)
         {
             if (pickup.sprite != null)
@@ -41,19 +51,46 @@ public class PickUp : MonoBehaviour
             }
         }
     }
-    
-    private void OnTriggerStay2D(Collider2D collision)
+
+    private void Update()
     {
-        GetPickedUp(collision);
+        GetPickedUp();
     }
 
-    private void GetPickedUp(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject == pc)
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.GetComponent<CharacterMovement>())
+        {
+            pcInside = true;
+        }
+
+        if(collision.GetComponent<LightSystem>())
+        {
+            ls = collision.GetComponent<LightSystem>();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.GetComponent<CharacterMovement>())
+        {
+            pcInside = false;
+        }
+    }
+
+    private void GetPickedUp()
+    {
+        if (pcInside)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 inv.PickUpItem(pickup);
+                ls.RemoveRequst(this.gameObject);
                 Destroy(this.gameObject);
             }
         }

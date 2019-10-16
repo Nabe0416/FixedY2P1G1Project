@@ -30,8 +30,8 @@ Transform:
   m_LocalPosition: {x: 5.55, y: 0.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6994875124552747798}
   - {fileID: 4599971655814897611}
+  - {fileID: 6994875124552747798}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -50,7 +50,6 @@ MonoBehaviour:
   MoveSpeed: 4
   characterSprite: {fileID: 4599971655814897614}
   TestOnly: 0
-  tempThrowObj: {fileID: 0}
 --- !u!58 &4599971654733101108
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -117,7 +116,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4599971654733101109}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4599971655814897608
 SpriteRenderer:
@@ -154,7 +153,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -993100661
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: cc40b9e20a00c774b96102ff9ecbc14b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -222,7 +221,7 @@ PrefabInstance:
     - target: {fileID: 3279572292154121829, guid: abdbd0cb4fadac245ad6befdd61114e0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3279572292154121829, guid: abdbd0cb4fadac245ad6befdd61114e0,
         type: 3}
