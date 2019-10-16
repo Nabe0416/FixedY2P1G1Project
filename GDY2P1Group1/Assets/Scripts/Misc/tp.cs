@@ -28,12 +28,18 @@ public class tp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
         {
+            if(collision.GetComponent<CharacterMovement>())
+        {
             intp1 = 2;
+        }
         }
 
     private void OnTriggerExit2D(Collider2D collision)
         {
+            if(collision.GetComponent<CharacterMovement>())
+        {
             intp1 = 1;
+        }
         }
 
 }
