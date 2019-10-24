@@ -206,7 +206,7 @@ public class Inventory : MonoBehaviour
     {
         if(selectedItemIndex != -1)
         {
-            if (itemList[selectedItemIndex].GetType() == typeof(ThrowableItem))
+            if (itemList[selectedItemIndex].GetType() == typeof(ThrowableItem) || itemList[selectedItemIndex].GetType() == typeof(PotionItem))
             {
                 #region Throwable Object
                 print(itemList[selectedItemIndex].name + " has been used.");
@@ -240,5 +240,6 @@ public class Inventory : MonoBehaviour
 
         pickupObj.GetComponent<CircleCollider2D>().isTrigger = false;
         pickupObj.GetComponent<Rigidbody2D>().AddForce(dir * 5, ForceMode2D.Impulse);
+        ThrowableGameObj.thrown = true;
     }
 }
