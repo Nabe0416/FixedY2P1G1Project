@@ -89,9 +89,8 @@ public class PickUp : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("pick up");
                 inv.PickUpItem(pickup);
-                // ls.RemoveRequst(this.gameObject);
+                ls.RemoveRequst(this.gameObject);
                 Destroy(this.gameObject);
             }
         }
