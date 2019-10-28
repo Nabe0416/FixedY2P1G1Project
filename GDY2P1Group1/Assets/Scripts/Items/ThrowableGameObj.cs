@@ -8,6 +8,12 @@ public class ThrowableGameObj : MonoBehaviour
 {
     private GameObject tilemap;
     private bool madeSound = false;
+<<<<<<< Updated upstream
+=======
+    private int targetTime = 960;
+    private bool effectDown = false;
+    public static bool thrown = false;
+>>>>>>> Stashed changes
 
     private Item item;
 
@@ -106,4 +112,39 @@ public class ThrowableGameObj : MonoBehaviour
         ai.DamageHP(damage);
         Destroy(this.gameObject);//Temp method.
     }
+<<<<<<< Updated upstream
+=======
+
+    private void effectTimer()
+    {
+        if(effectDown)
+        {
+            if(thrown)
+            {
+                effectCollider(this.gameObject);
+            }
+            thrown = false;
+            targetTime -= 1;
+            if (targetTime <= 0) 
+            {
+                destroyEffect();
+            }
+        }
+    }
+
+    private void effectCollider(GameObject gameObject)
+    {
+        gameObject.AddComponent<AreaEffect>();
+        gameObject.GetComponent<CircleCollider2D>().radius = 2.0f;
+        gameObject.AddComponent<ParticleSystem>();
+    }
+
+    private void destroyEffect()
+    {
+        Destroy(gameObject);
+        effectDown = false;
+        targetTime  = 960;
+        thrown = false;
+    }
+>>>>>>> Stashed changes
 }

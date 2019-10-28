@@ -112,7 +112,29 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< Updated upstream:GDY2P1Group1/Assets/Scenes/RoomNMovement.unity
 --- !u!1001 &62004730
+=======
+--- !u!4 &72424183 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3687981754995475811, guid: 78d05fc2045e8b8499e01b635e259650,
+    type: 3}
+  m_PrefabInstance: {fileID: 408133624}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &287531583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 653113280537596100, guid: 78d05fc2045e8b8499e01b635e259650,
+    type: 3}
+  m_PrefabInstance: {fileID: 408133624}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &287531584 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2592286898002884174, guid: 78d05fc2045e8b8499e01b635e259650,
+    type: 3}
+  m_PrefabInstance: {fileID: 408133624}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &320872897
+>>>>>>> Stashed changes:GDY2P1Group1/Assets/Scripts/Scenes/RoomNMovement.unity
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -496,6 +518,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gameworld
       objectReference: {fileID: 0}
+    - target: {fileID: 2592286898002884174, guid: 78d05fc2045e8b8499e01b635e259650,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3387335777849397397, guid: 78d05fc2045e8b8499e01b635e259650,
         type: 3}
       propertyPath: lightSwitch
@@ -539,7 +566,11 @@ PrefabInstance:
     - target: {fileID: 3737317474943423663, guid: 78d05fc2045e8b8499e01b635e259650,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream:GDY2P1Group1/Assets/Scenes/RoomNMovement.unity
       value: 5
+=======
+      value: 3
+>>>>>>> Stashed changes:GDY2P1Group1/Assets/Scripts/Scenes/RoomNMovement.unity
       objectReference: {fileID: 0}
     - target: {fileID: 3737317474943423663, guid: 78d05fc2045e8b8499e01b635e259650,
         type: 3}
@@ -32945,6 +32976,7 @@ PrefabInstance:
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:GDY2P1Group1/Assets/Scenes/RoomNMovement.unity
     - target: {fileID: 3645382569920244746, guid: c743bc9c7224f424590f81413bd2682c,
         type: 3}
       propertyPath: m_LocalRotation.y
@@ -32985,6 +33017,8 @@ PrefabInstance:
       propertyPath: guardingPos
       value: 
       objectReference: {fileID: 2119108470}
+=======
+>>>>>>> Stashed changes:GDY2P1Group1/Assets/Scripts/Scenes/RoomNMovement.unity
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c743bc9c7224f424590f81413bd2682c, type: 3}
 --- !u!1 &486626212 stripped
@@ -33190,6 +33224,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 408133624}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:GDY2P1Group1/Assets/Scenes/RoomNMovement.unity
 --- !u!50 &551621319
 Rigidbody2D:
   serializedVersion: 4
@@ -33211,6 +33246,109 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+=======
+--- !u!1001 &434701801
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 287531584}
+    m_Modifications:
+    - target: {fileID: 3465229889606869128, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: m_Name
+      value: Poison
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465229889606869127, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.2176447
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465229889606869127, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.30984703
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465229889606869127, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465229889606869127, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465229889606869127, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465229889606869127, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465229889606869127, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465229889606869127, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465229889606869127, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465229889606869127, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465229889606869127, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465229889606869126, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2c87ea5256b5a3d4dbe2d3b09d7d76aa,
+        type: 3}
+    - target: {fileID: 3465229889606869126, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465229889606869126, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465229889606869126, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465229889606869129, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: pickup
+      value: 
+      objectReference: {fileID: 11400000, guid: 33b1d56a19aadeb41968653f108d2cec,
+        type: 2}
+    - target: {fileID: 4423453291590474314, guid: 246c2a0a432a1014abdaa3bec190e6f9,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 246c2a0a432a1014abdaa3bec190e6f9, type: 3}
+>>>>>>> Stashed changes:GDY2P1Group1/Assets/Scripts/Scenes/RoomNMovement.unity
 --- !u!1001 &643618623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36684,7 +36822,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -36708,8 +36846,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994069096}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< Updated upstream:GDY2P1Group1/Assets/Scenes/RoomNMovement.unity
   m_LocalPosition: {x: 0.91, y: 1.25, z: -1.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
+=======
+  m_LocalPosition: {x: -2.61, y: -3.6, z: -1.37}
+  m_LocalScale: {x: 1, y: 1.2125, z: 1}
+>>>>>>> Stashed changes:GDY2P1Group1/Assets/Scripts/Scenes/RoomNMovement.unity
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -39175,7 +39318,11 @@ PrefabInstance:
     - target: {fileID: 3645382569920244746, guid: c743bc9c7224f424590f81413bd2682c,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream:GDY2P1Group1/Assets/Scenes/RoomNMovement.unity
       value: 17
+=======
+      value: 2
+>>>>>>> Stashed changes:GDY2P1Group1/Assets/Scripts/Scenes/RoomNMovement.unity
       objectReference: {fileID: 0}
     - target: {fileID: 3645382569920244746, guid: c743bc9c7224f424590f81413bd2682c,
         type: 3}
@@ -47868,6 +48015,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1863439018478924202, guid: 7f99fb351af820a409693b29b0c98b58,
         type: 3}
+<<<<<<< Updated upstream:GDY2P1Group1/Assets/Scenes/RoomNMovement.unity
     - target: {fileID: 4599971655814897608, guid: 9aab0eb2b17668e4fbbf6caa5d0aee31,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -47878,5 +48026,15 @@ PrefabInstance:
       propertyPath: pickupParent
       value: 
       objectReference: {fileID: 1522400223}
+=======
+      propertyPath: m_LocalPosition.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3941127595287447306, guid: 8dc3a65f93bacfe4ab93e961c6699217,
+        type: 3}
+      propertyPath: pickupParent
+      value: 
+      objectReference: {fileID: 287531583}
+>>>>>>> Stashed changes:GDY2P1Group1/Assets/Scripts/Scenes/RoomNMovement.unity
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9aab0eb2b17668e4fbbf6caa5d0aee31, type: 3}
