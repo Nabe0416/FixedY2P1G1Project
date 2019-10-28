@@ -8,7 +8,7 @@ public class ThrowableGameObj : MonoBehaviour
 {
     private GameObject tilemap;
     private bool madeSound = false;
-    private int targetTime = 480;
+    private int targetTime = 960;
     private bool effectDown = false;
     public static bool thrown = false;
 
@@ -120,7 +120,7 @@ public class ThrowableGameObj : MonoBehaviour
         ai.DamageHP(damage);
         Destroy(this.gameObject);//Temp method.
     }
-
+    
     private void effectTimer()
     {
         if(effectDown)
@@ -142,13 +142,14 @@ public class ThrowableGameObj : MonoBehaviour
     {
         gameObject.AddComponent<AreaEffect>();
         gameObject.GetComponent<CircleCollider2D>().radius = 2.0f;
+        gameObject.AddComponent<ParticleSystem>();
     }
 
     private void destroyEffect()
     {
         Destroy(gameObject);
         effectDown = false;
-        targetTime  = 480;
+        targetTime  = 960;
         thrown = false;
     }
 }
