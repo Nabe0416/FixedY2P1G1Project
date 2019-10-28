@@ -239,7 +239,7 @@ public class Inventory : MonoBehaviour
         }
 
         pickupObj.GetComponent<CircleCollider2D>().isTrigger = false;
-        pickupObj.GetComponent<Rigidbody2D>().AddForce(dir * 5, ForceMode2D.Impulse);
+        pickupObj.GetComponent<Rigidbody2D>().AddForce(dir * 3, ForceMode2D.Impulse);
         ThrowableGameObj.thrown = true;
     }
 }

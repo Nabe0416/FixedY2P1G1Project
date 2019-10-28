@@ -6,5 +6,6 @@ using UnityEngine;
 public class PotionItem : ThrowableItem
 {
     public uint effectDamage;
+    public uint potionSort;
     // public uint effectSpeed;
 }
