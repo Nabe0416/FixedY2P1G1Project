@@ -8,11 +8,9 @@ public class ThrowableGameObj : MonoBehaviour
 {
     private GameObject tilemap;
     private bool madeSound = false;
-    private int targetTime = 960;
-    private bool effectDown = false;
-    public static bool thrown = false;
 
     private Item item;
+    private PotionItem pItem;
 
     [SerializeField]
     private GameObject soundsrc;
@@ -24,6 +22,7 @@ public class ThrowableGameObj : MonoBehaviour
         #region Refs.
         tilemap = FindObjectOfType<Tilemap>().gameObject;
         item = this.GetComponent<PickUp>().pickup;
+        pItem = (PotionItem)this.GetComponent<PickUp>().pickup;
         #endregion
     }
 
@@ -32,7 +31,7 @@ public class ThrowableGameObj : MonoBehaviour
         MakeStoppedObj();
         if(item.GetType() == typeof(PotionItem))
         {
-            effectTimer();
+            pItem.effectTimer(this.gameObject);
         }
     }
 
@@ -46,9 +45,9 @@ public class ThrowableGameObj : MonoBehaviour
                 GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 GetComponent<CircleCollider2D>().isTrigger = true;
                 MakeSound();
-                if(item.GetType() == typeof(PotionItem) && thrown == true)
+                if(item.GetType() == typeof(PotionItem) && PotionItem.thrown == true)
                 {
-                    effectDown = true;
+                    PotionItem.effectDown = true;
                 } 
             }
         }
@@ -63,9 +62,9 @@ public class ThrowableGameObj : MonoBehaviour
                 GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 GetComponent<CircleCollider2D>().isTrigger = true;
                 MakeSound();
-                if(item.GetType() == typeof(PotionItem) && thrown == true)
+                if(item.GetType() == typeof(PotionItem) && PotionItem.thrown == true)
                 {
-                    effectDown = true;
+                    PotionItem.effectDown = true;
                 } 
             }
         }
@@ -77,9 +76,9 @@ public class ThrowableGameObj : MonoBehaviour
                 Hurt(collision.gameObject.GetComponent<EnemyAI>(), (int)tItem.damage);
                 print(collision.gameObject + " is hurt by " + tItem.name + ", the dmg is " + tItem.damage);
             }
-            if(item.GetType() == typeof(PotionItem) && thrown == true)
+            if(item.GetType() == typeof(PotionItem) && PotionItem.thrown == true)
             {
-                effectDown = true;
+                PotionItem.effectDown = true;
             } 
         }
     }
@@ -120,36 +119,9 @@ public class ThrowableGameObj : MonoBehaviour
         ai.DamageHP(damage);
         Destroy(this.gameObject);//Temp method.
     }
-    
-    private void effectTimer()
-    {
-        if(effectDown)
-        {
-            if(thrown)
-            {
-                effectCollider(this.gameObject);
-            }
-            thrown = false;
-            targetTime -= 1;
-            if (targetTime <= 0) 
-            {
-                destroyEffect();
-            }
-        }
-    }
 
-    private void effectCollider(GameObject gameObject)
+    public Item GetItem()
     {
-        gameObject.AddComponent<AreaEffect>();
-        gameObject.GetComponent<CircleCollider2D>().radius = 2.0f;
-        gameObject.AddComponent<ParticleSystem>();
-    }
-
-    private void destroyEffect()
-    {
-        Destroy(gameObject);
-        effectDown = false;
-        targetTime  = 960;
-        thrown = false;
+        return item;
     }
 }
