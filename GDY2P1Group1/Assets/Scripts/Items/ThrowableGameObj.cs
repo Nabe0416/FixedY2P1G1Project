@@ -72,7 +72,9 @@ public class ThrowableGameObj : MonoBehaviour
         {
             if(item.GetType() == typeof(ThrowableItem))
             {
+                
                 ThrowableItem tItem = (ThrowableItem)item;
+                collision.gameObject.GetComponent<EnemyAI>().StunEnemy();
                 Hurt(collision.gameObject.GetComponent<EnemyAI>(), (int)tItem.damage);
                 print(collision.gameObject + " is hurt by " + tItem.name + ", the dmg is " + tItem.damage);
             }

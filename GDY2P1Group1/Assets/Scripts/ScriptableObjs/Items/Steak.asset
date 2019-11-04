@@ -15,5 +15,6 @@ MonoBehaviour:
   id: 4
   name: Steak
   sprite: {fileID: 0}
-  damage: 10
+  damage: 2
   weight: 1
+  instaKill: 0
