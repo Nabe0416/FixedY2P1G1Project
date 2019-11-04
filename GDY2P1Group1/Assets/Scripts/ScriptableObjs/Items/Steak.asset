@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   name: Steak
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 2c87ea5256b5a3d4dbe2d3b09d7d76aa, type: 3}
   damage: 2
   weight: 1
-  instaKill: 0
