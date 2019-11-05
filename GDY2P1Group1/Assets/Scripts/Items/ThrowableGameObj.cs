@@ -22,7 +22,10 @@ public class ThrowableGameObj : MonoBehaviour
         #region Refs.
         tilemap = FindObjectOfType<Tilemap>().gameObject;
         item = this.GetComponent<PickUp>().pickup;
-        pItem = (PotionItem)this.GetComponent<PickUp>().pickup;
+        if(item.GetType() == typeof(PotionItem))
+        {
+            pItem = (PotionItem)this.GetComponent<PickUp>().pickup;
+        }
         #endregion
     }
 
