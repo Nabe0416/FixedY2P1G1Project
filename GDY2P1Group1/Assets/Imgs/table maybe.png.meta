@@ -22,6 +22,7 @@ TextureImporter:
     21300034: table maybe_17
     21300036: table maybe_18
     21300038: table maybe_19
+    21300040: table maybe_20
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -118,7 +119,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16309c15b433aa34e81640e856fc7af5
+      spriteID: 30569dc07e1f7e04daf82e2b5362f4f5
       vertices: []
       indices: 
       edges: []
@@ -138,7 +139,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c965ee23a1fdbf4ea7d54c68fb63b52
+      spriteID: 16d23452e91f6ec489db416846bf9058
       vertices: []
       indices: 
       edges: []
@@ -158,7 +159,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a50784128f3faf4aa0b8cabee41b6a2
+      spriteID: 7939a0e3c54cd2e49ac231c3d9fd40e8
       vertices: []
       indices: 
       edges: []
@@ -178,7 +179,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eb9af3ad5cde8746b8b52c2ae6629d6
+      spriteID: 7d0b7a5acba63e144b4eea783beac9fc
       vertices: []
       indices: 
       edges: []
@@ -198,7 +199,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a510f7fa254c784428ea2d3e31efc3c2
+      spriteID: 4f8018d6f6ae55945a6fecdbe4fdaf55
       vertices: []
       indices: 
       edges: []
@@ -218,7 +219,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a1d2f0dd985bed428db6f477bd8c6b8
+      spriteID: ae319b92e0801c340be5a8153c6bf2b0
       vertices: []
       indices: 
       edges: []
@@ -238,7 +239,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a622f1fbc0e640489cf3077d08f4169
+      spriteID: 5bd7836052445e543bf737d4768ac693
       vertices: []
       indices: 
       edges: []
@@ -258,7 +259,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15d97249aa6341a4c931bbdfd66ed198
+      spriteID: 036d0d5bdd8a29842a65b07e458e2472
       vertices: []
       indices: 
       edges: []
@@ -278,7 +279,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 393bf7469221a4e4581e65ddf0fd255d
+      spriteID: 1dddb3d61ea8aa245ba34df4fb84fa41
       vertices: []
       indices: 
       edges: []
@@ -298,7 +299,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c5da9aaf5d7c594da83645a9f510fad
+      spriteID: 849961e39069fa7429026612cfee0361
       vertices: []
       indices: 
       edges: []
@@ -318,7 +319,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b66e03b0d57d19942afca285dee50848
+      spriteID: c39d43d2cc066c140bfa42e6f39c00d5
       vertices: []
       indices: 
       edges: []
@@ -327,8 +328,8 @@ TextureImporter:
       name: table maybe_11
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 192
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -338,7 +339,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c3c15102b8fbdb49a019358d0393f0d
+      spriteID: 7e48b85f3d96c7b46b7a904b2a28e3b9
       vertices: []
       indices: 
       edges: []
@@ -347,7 +348,7 @@ TextureImporter:
       name: table maybe_12
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 128
         width: 64
         height: 64
@@ -358,7 +359,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef77ae7cdf41ed347b029910f2a1eac9
+      spriteID: fdb5648ca5ef95e43bd7609c29549d2f
       vertices: []
       indices: 
       edges: []
@@ -367,6 +368,26 @@ TextureImporter:
       name: table maybe_13
       rect:
         serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f1b55ccfba73be4daf99a2fa95260db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table maybe_14
+      rect:
+        serializedVersion: 2
         x: 128
         y: 128
         width: 64
@@ -378,27 +399,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54b9f2f5515058e44ae509d77fa7c3dc
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: table maybe_14
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43b11a2cd5b38c64da9e2b22ea3100c7
+      spriteID: 5c358c209fd17f24595a9c490afaf3ef
       vertices: []
       indices: 
       edges: []
@@ -407,6 +408,26 @@ TextureImporter:
       name: table maybe_15
       rect:
         serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afb2eedf77f32ed45a87c7172ca1af85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table maybe_16
+      rect:
+        serializedVersion: 2
         x: 64
         y: 64
         width: 64
@@ -418,13 +439,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0f9074eb6c45bf4e9b313df96fb086e
+      spriteID: c75c2fcd322d0534a82e2974398373aa
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table maybe_16
+      name: table maybe_17
       rect:
         serializedVersion: 2
         x: 128
@@ -438,13 +459,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3384d18725f86234d93ce8bd9d43c248
+      spriteID: ec8e0f8c35a6afd4983114fca6bb2c9c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table maybe_17
+      name: table maybe_18
       rect:
         serializedVersion: 2
         x: 0
@@ -458,13 +479,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15b5adfeaa7c0244dbe55c0b4864d3d1
+      spriteID: 6295f00cb31d23e4d828931406125b18
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table maybe_18
+      name: table maybe_19
       rect:
         serializedVersion: 2
         x: 64
@@ -478,13 +499,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba93dddd4067900478321ae5d693cb4e
+      spriteID: e187b9b2ef2e64a4fa3001f2c8523df6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table maybe_19
+      name: table maybe_20
       rect:
         serializedVersion: 2
         x: 128
@@ -498,7 +519,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 427d3a8a29c954844b14dfd0e28c0894
+      spriteID: 40b50805e4ed59543bb22c428616f976
       vertices: []
       indices: 
       edges: []
@@ -506,7 +527,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e29e41ec6d065ff499d2fe8066a74082
+    spriteID: 33950820183b5c74882fc6fac99c0712
     vertices: []
     indices: 
     edges: []
