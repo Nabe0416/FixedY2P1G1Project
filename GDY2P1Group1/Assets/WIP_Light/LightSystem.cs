@@ -215,8 +215,6 @@ public class LightSystem : MonoBehaviour
                 theOne = ai;
             }
         }
-
-        print(theOne);
         theOne.InformLight(lightSwitch.transform);
     }
 
