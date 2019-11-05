@@ -44,6 +44,8 @@ public class EnemyAI : MonoBehaviour
 
     private AIDestinationSetter setter;
 
+    private LightSystem ls;
+
     private void Start()
     {
         #region Refs.
@@ -137,9 +139,19 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    [ContextMenu("KillThisGuy")]
     private void Die()
     {
         print(this.gameObject + " is dead.");
+        LightSystem[] lss = FindObjectsOfType<LightSystem>();
+        foreach(LightSystem ls in lss)
+        {
+            if(ls.GetObjList().Contains(this.gameObject))
+            {
+                ls.RemoveRequst(this.gameObject);
+            }
+        }
+
         this.gameObject.SetActive(false);
     }
 
@@ -171,6 +183,14 @@ public class EnemyAI : MonoBehaviour
             {
                 WantToSwitchLight = false;
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.GetComponent<CharacterMovement>())
+        {
+            collision.gameObject.GetComponent<CharacterMovement>().GetKilled();
         }
     }
 

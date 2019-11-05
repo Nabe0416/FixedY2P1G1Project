@@ -219,4 +219,9 @@ public class LightSystem : MonoBehaviour
         print(theOne);
         theOne.InformLight(lightSwitch.transform);
     }
+
+    public List<GameObject> GetObjList()
+    {
+        return objectList;
+    }
 }

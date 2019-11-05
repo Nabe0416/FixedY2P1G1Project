@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField]
-    private List<Item> itemList = new List<Item>();
+    public List<Item> itemList = new List<Item>();
     [SerializeField]
     private int maxInventorySize = 3;
 
@@ -22,6 +21,8 @@ public class Inventory : MonoBehaviour
 
     //The variable name should reveal itself, in this case I name it "pc" stand for player character.
     private GameObject pc;
+
+    private InventoryUI ivui;
 
     #region Ryan's code.
 
@@ -116,6 +117,8 @@ public class Inventory : MonoBehaviour
     {
         #region Refs.
         pc = FindObjectOfType<CharacterMovement>().gameObject;
+        pickupParent = FindObjectOfType<PickupParent>().gameObject;
+        ivui = FindObjectOfType<InventoryUI>();
         #endregion
     }
 
@@ -144,6 +147,9 @@ public class Inventory : MonoBehaviour
         {
             selectedItemIndex = 0;//When picking something up, change seleted item index to a available value.
         }
+
+        ivui.UpdateIventoryIn();
+        ivui.UpdateIventorySelect(selectedItemIndex);
     }
 
     private GameObject DropItem(int index)
@@ -158,6 +164,8 @@ public class Inventory : MonoBehaviour
             {
                 selectedItemIndex -= 1;
             }
+            ivui.UpdateIventoryOut();
+            ivui.UpdateIventorySelect(selectedItemIndex);
             return pickupObj;
         }
         else
@@ -177,7 +185,8 @@ public class Inventory : MonoBehaviour
         }else if(Input.GetKeyDown(KeyCode.Alpha2))
         {
             GoToItemIndex(1);
-        }else if(Input.GetKeyDown(KeyCode.Alpha3))
+        }
+        else if(Input.GetKeyDown(KeyCode.Alpha3))
         {
             GoToItemIndex(2);
         }
@@ -190,14 +199,17 @@ public class Inventory : MonoBehaviour
         {
             Debug.LogWarning("No items in the inventory");
             selectedItemIndex = -1;
+            ivui.UpdateIventorySelect(selectedItemIndex);
         }
-        if(index >= itemList.Count)
+        if (index >= itemList.Count)
         {
             selectedItemIndex = itemList.Count - 1;
+            ivui.UpdateIventorySelect(selectedItemIndex);
         }
         else
         {
             selectedItemIndex = index;
+            ivui.UpdateIventorySelect(selectedItemIndex);
         }
         //Debug.Log(itemList.Count);
     }
@@ -222,7 +234,8 @@ public class Inventory : MonoBehaviour
         {
             Debug.LogWarning("Not selecting any item");
         }
-
+        ivui.UpdateIventoryOut();
+        ivui.UpdateIventorySelect(selectedItemIndex);
     }
 
     private void ThrowItem(int index)

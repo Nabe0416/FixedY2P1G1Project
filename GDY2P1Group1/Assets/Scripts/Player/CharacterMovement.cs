@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -90,5 +91,10 @@ public class CharacterMovement : MonoBehaviour
     public Vector2 GetPCMouseDir()
     {
         return (GetMousePosition() - (Vector2)transform.position).normalized;
+    }
+
+    public void GetKilled()
+    {
+        SceneManager.LoadScene(0);
     }
 }
