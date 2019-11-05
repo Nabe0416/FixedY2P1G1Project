@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   name: Fork
-  sprite: {fileID: 21300000, guid: 2c87ea5256b5a3d4dbe2d3b09d7d76aa, type: 3}
+  sprite: {fileID: 21300000, guid: 64edd7dbcfbf85e46b967eb54ac0250a, type: 3}
   damage: 3
   weight: 1
