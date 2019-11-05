@@ -11,6 +11,9 @@ public class ViewRange : MonoBehaviour
     private GameObject pc;
     private GameObject tilemap;
 
+    [SerializeField]
+    private List<GameObject> maps = new List<GameObject>();
+
     private CapsuleCollider2D range;
 
     [SerializeField]
@@ -22,6 +25,7 @@ public class ViewRange : MonoBehaviour
     [SerializeField]
     private float sizeYDM = 6f;
 
+    [SerializeField]
     private List<GameObject> list = new List<GameObject>();
 
     private void Start()
@@ -30,6 +34,12 @@ public class ViewRange : MonoBehaviour
         pc = FindObjectOfType<CharacterMovement>().gameObject;
         tilemap = FindObjectOfType<Tilemap>().gameObject;
         range = GetComponent<CapsuleCollider2D>();
+
+        var m = FindObjectsOfType<Tilemap>();
+        foreach(Tilemap t in m)
+        {
+            maps.Add(t.gameObject);
+        }
         #endregion
     }
 
@@ -47,7 +57,11 @@ public class ViewRange : MonoBehaviour
                     list.Add(result.collider.gameObject);
                 }
             }
-            if (list.Contains(tilemap) == false && list.Count != 0)
+            if (list.Contains(maps[0]) == false &&
+                list.Contains(maps[1]) == false &&
+                list.Contains(maps[2]) == false &&
+                list.Contains(maps[3]) == false &&
+                list.Contains(maps[4]) == false && list.Count != 0)
             {
                 ai.SeePlayerAt(pc.GetComponent<CharacterMovement>().GetPlayerTransform());
                 ai.pcIsInView = true;
