@@ -22,7 +22,10 @@ public class ThrowableGameObj : MonoBehaviour
         #region Refs.
         tilemap = FindObjectOfType<Tilemap>().gameObject;
         item = this.GetComponent<PickUp>().pickup;
-        pItem = (PotionItem)this.GetComponent<PickUp>().pickup;
+        if(item.GetType() == typeof(PotionItem))
+        {
+            pItem = (PotionItem)this.GetComponent<PickUp>().pickup;
+        }
         #endregion
     }
 
@@ -74,7 +77,7 @@ public class ThrowableGameObj : MonoBehaviour
             {
                 
                 ThrowableItem tItem = (ThrowableItem)item;
-                collision.gameObject.GetComponent<EnemyAI>().StunEnemy();
+                collision.gameObject.GetComponent<EnemyAI>().StunEnemy(tItem.weight);
                 Hurt(collision.gameObject.GetComponent<EnemyAI>(), (int)tItem.damage);
                 print(collision.gameObject + " is hurt by " + tItem.name + ", the dmg is " + tItem.damage);
             }

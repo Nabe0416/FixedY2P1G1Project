@@ -105,11 +105,11 @@ public class EnemyAI : MonoBehaviour
         Hitpoint -= value;
     }
 
-    public void StunEnemy()
+    public void StunEnemy(int stunSeconds)
     {
         Debug.Log("stun enemy, view to null");
         Stunned = true;
-        StunnedSeconds = 5;
+        StunnedSeconds = stunSeconds;
         timer = 0.0f;
 
 
