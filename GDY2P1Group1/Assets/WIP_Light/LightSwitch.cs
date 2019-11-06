@@ -7,8 +7,23 @@ public class LightSwitch : MonoBehaviour
     [SerializeField]
     private LightSystem ls;
 
+    [SerializeField]
+    private Sprite onSprite, offSprite;
+
     private bool playerNear = false;
     private bool switchOn = true;
+
+    private void Start()
+    {
+        if(switchOn)
+        {
+            GetComponent<SpriteRenderer>().sprite = onSprite;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().sprite = offSprite;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -65,6 +80,15 @@ public class LightSwitch : MonoBehaviour
         else
         {
             ls.TurnOffLight();
+        }
+
+        if (switchOn)
+        {
+            GetComponent<SpriteRenderer>().sprite = onSprite;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().sprite = offSprite;
         }
     }
 }
