@@ -922,7 +922,7 @@ PrefabInstance:
     - target: {fileID: 3465229889606869128, guid: 246c2a0a432a1014abdaa3bec190e6f9,
         type: 3}
       propertyPath: m_Name
-      value: Microscope
+      value: Beaker
       objectReference: {fileID: 0}
     - target: {fileID: 3465229889606869127, guid: 246c2a0a432a1014abdaa3bec190e6f9,
         type: 3}
@@ -983,7 +983,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pickup
       value: 
-      objectReference: {fileID: 11400000, guid: b563062c989742744964dbebcb47f8d7,
+      objectReference: {fileID: 11400000, guid: e9203a8c53d9fa34384ecab53b20eea5,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 246c2a0a432a1014abdaa3bec190e6f9, type: 3}
@@ -1309,7 +1309,7 @@ PrefabInstance:
     - target: {fileID: 3465229889606869128, guid: 246c2a0a432a1014abdaa3bec190e6f9,
         type: 3}
       propertyPath: m_Name
-      value: Microscope
+      value: Beaker
       objectReference: {fileID: 0}
     - target: {fileID: 3465229889606869127, guid: 246c2a0a432a1014abdaa3bec190e6f9,
         type: 3}
@@ -1370,7 +1370,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pickup
       value: 
-      objectReference: {fileID: 11400000, guid: b563062c989742744964dbebcb47f8d7,
+      objectReference: {fileID: 11400000, guid: e9203a8c53d9fa34384ecab53b20eea5,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 246c2a0a432a1014abdaa3bec190e6f9, type: 3}
