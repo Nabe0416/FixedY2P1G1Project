@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class EndPoint : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject endscreen;
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.R))
@@ -25,11 +28,13 @@ public class EndPoint : MonoBehaviour
     void GameEnd()
     {
         print("Game End.");
-        SceneManager.LoadScene(0);
+        //SceneManager.LoadScene(0);
+        endscreen.SetActive(true);
     }
 
     void GameRestart()
     {
-        GameEnd();
+        //GameEnd();
+        SceneManager.LoadScene(0);
     }
 }
