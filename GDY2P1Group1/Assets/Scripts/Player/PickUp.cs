@@ -91,7 +91,8 @@ public class PickUp : MonoBehaviour
             {
                 inv.PickUpItem(pickup);
                 // ls.RemoveRequst(this.gameObject);
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
+                gameObject.SetActive(false);
             }
         }
     }

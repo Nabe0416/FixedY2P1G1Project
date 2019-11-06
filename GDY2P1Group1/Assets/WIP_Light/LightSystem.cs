@@ -175,9 +175,15 @@ public class LightSystem : MonoBehaviour
 
     public void RemoveRequst(GameObject go)
     {
+        print("Remove Request received");
         if (GetObjList().Contains(this.gameObject))
         {
             objectList.Remove(go);
+            print("Gameobject removed");
+        }
+        else
+        {
+            print("Couldn't find the gameobject in light system of " + this.transform.parent);
         }
     }
 
