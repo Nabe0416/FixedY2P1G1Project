@@ -164,6 +164,9 @@ public class Inventory : MonoBehaviour
             {
                 selectedItemIndex -= 1;
             }
+
+            ivui.UpdateIventoryIn();
+
             ivui.UpdateIventoryOut();
             ivui.UpdateIventorySelect(selectedItemIndex);
             return pickupObj;
@@ -234,6 +237,9 @@ public class Inventory : MonoBehaviour
         {
             Debug.LogWarning("Not selecting any item");
         }
+
+        ivui.UpdateIventoryIn();
+
         ivui.UpdateIventoryOut();
         ivui.UpdateIventorySelect(selectedItemIndex);
     }

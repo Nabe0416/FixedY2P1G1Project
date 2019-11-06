@@ -15,7 +15,10 @@ public class EndPoint : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameEnd();
+        if(collision.gameObject.GetComponent<CharacterMovement>())
+        {
+            GameEnd();
+        }
     }
 
     [ContextMenu("EndGame")]

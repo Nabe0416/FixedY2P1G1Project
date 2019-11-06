@@ -46,6 +46,16 @@ public class InventoryUI : MonoBehaviour
                 index++;
             }
         }
+
+        if (iv.itemList.Count < 3)
+        {
+            for (int i = iv.itemList.Count; i < 3; i++)
+            {
+                slots[i].sprite = null;
+                slots[i].color = new Color(0f, 0f, 0f, 0f);
+            }
+        }
+
     }
 
     public void UpdateIventoryOut()
