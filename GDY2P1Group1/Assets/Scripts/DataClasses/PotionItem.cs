@@ -6,7 +6,7 @@ using UnityEngine;
 public class PotionItem : ThrowableItem
 {
     public uint potionSort;
-    private int targetTime = 960;
+    private int targetTime = 420;
     public static bool effectDown = false;
     public static bool thrown = false;
 
@@ -30,7 +30,7 @@ public class PotionItem : ThrowableItem
     public void destroyEffect(GameObject gameObject)
     {
         Destroy(gameObject);
-        targetTime  = 960;
+        targetTime  = 420;
     }
 
     private void effectCollider(GameObject gameObject)

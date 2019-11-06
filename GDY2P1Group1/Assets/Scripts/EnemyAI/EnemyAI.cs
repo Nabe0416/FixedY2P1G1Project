@@ -94,12 +94,12 @@ public class EnemyAI : MonoBehaviour
 
     private void ChasePlayerMode()
     {
-        GetComponent<AIPath>().maxSpeed = 3;
+        GetComponent<AIPath>().maxSpeed = 6;
     }
 
     private void SearchMode()
     {
-        GetComponent<AIPath>().maxSpeed = 1;
+        GetComponent<AIPath>().maxSpeed = 2;
     }
 
     public void DamageHP(int value)

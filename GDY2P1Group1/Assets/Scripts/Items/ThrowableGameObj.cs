@@ -65,10 +65,6 @@ public class ThrowableGameObj : MonoBehaviour
                 GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 GetComponent<CircleCollider2D>().isTrigger = true;
                 MakeSound();
-                if(item.GetType() == typeof(PotionItem) && PotionItem.thrown == true)
-                {
-                    PotionItem.effectDown = true;
-                } 
             }
         }
         if(collision.gameObject.GetComponent<EnemyAI>())
@@ -81,10 +77,6 @@ public class ThrowableGameObj : MonoBehaviour
                 Hurt(collision.gameObject.GetComponent<EnemyAI>(), (int)tItem.damage);
                 print(collision.gameObject + " is hurt by " + tItem.name + ", the dmg is " + tItem.damage);
             }
-            if(item.GetType() == typeof(PotionItem) && PotionItem.thrown == true)
-            {
-                PotionItem.effectDown = true;
-            } 
         }
     }
 
