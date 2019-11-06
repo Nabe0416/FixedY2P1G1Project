@@ -175,7 +175,10 @@ public class LightSystem : MonoBehaviour
 
     public void RemoveRequst(GameObject go)
     {
-        objectList.Remove(go);
+        if (GetObjList().Contains(this.gameObject))
+        {
+            objectList.Remove(go);
+        }
     }
 
     public void SetMaterial(GameObject go)

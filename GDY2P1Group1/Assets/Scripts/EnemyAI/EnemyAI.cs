@@ -146,10 +146,7 @@ public class EnemyAI : MonoBehaviour
         LightSystem[] lss = FindObjectsOfType<LightSystem>();
         foreach(LightSystem ls in lss)
         {
-            if(ls.GetObjList().Contains(this.gameObject))
-            {
-                ls.RemoveRequst(this.gameObject);
-            }
+            ls.RemoveRequst(this.gameObject);
         }
 
         this.gameObject.SetActive(false);
