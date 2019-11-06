@@ -16,4 +16,4 @@ MonoBehaviour:
   name: 
   sprite: {fileID: 21300000, guid: 728a6d9d91610f2458ed59ca0b29db74, type: 3}
   damage: 10
-  weight: 5
+  weight: 10

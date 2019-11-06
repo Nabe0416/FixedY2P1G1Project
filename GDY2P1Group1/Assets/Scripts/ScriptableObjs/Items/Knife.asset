@@ -16,4 +16,4 @@ MonoBehaviour:
   name: Knife
   sprite: {fileID: 21300000, guid: 6f650c69b3ed13f46a6118ba1a7eef49, type: 3}
   damage: 10
-  weight: 2
+  weight: 10
