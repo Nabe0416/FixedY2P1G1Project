@@ -178,6 +178,7 @@ public class EnemyAI : MonoBehaviour
         {
             if(WantToSwitchLight)
             {
+                collision.GetComponent<LightSwitch>().switchLight();
                 WantToSwitchLight = false;
             }
         }

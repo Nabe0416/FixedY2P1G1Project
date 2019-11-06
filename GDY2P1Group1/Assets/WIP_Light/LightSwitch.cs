@@ -31,16 +31,6 @@ public class LightSwitch : MonoBehaviour
         {
             playerNear = true;
         }
-
-        if (collision.gameObject.GetComponent<EnemyAI>())
-        {
-            print("in");
-            if(collision.gameObject.GetComponent<EnemyAI>().WantToSwitchLight)
-            {
-                print("stc");
-                switchLight();
-            }
-        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -62,7 +52,7 @@ public class LightSwitch : MonoBehaviour
         }
     }
 
-    private void switchLight()
+    public void switchLight()
     {
         if(switchOn)
         {
