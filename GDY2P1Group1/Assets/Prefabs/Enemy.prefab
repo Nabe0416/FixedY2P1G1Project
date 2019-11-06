@@ -130,10 +130,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ai: {fileID: 3645382569920244745}
+  maps: []
   offsetYLM: 2.979516
   sizeYLM: 8
   offsetYDM: 2.125477
   sizeYDM: 6
+  list: []
 --- !u!1 &1772534409840532062
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,6 +431,7 @@ MonoBehaviour:
   StaticGuard: 1
   guardingPos: {fileID: 0}
   wayPoints: []
+  AchievedDes: 0
 --- !u!50 &3645382569920244744
 Rigidbody2D:
   serializedVersion: 4
