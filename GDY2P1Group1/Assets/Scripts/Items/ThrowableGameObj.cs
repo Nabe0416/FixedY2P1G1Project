@@ -114,7 +114,8 @@ public class ThrowableGameObj : MonoBehaviour
     private void Hurt(EnemyAI ai, int damage)
     {
         ai.DamageHP(damage);
-        Destroy(this.gameObject);//Temp method.
+        //Destroy(this.gameObject);//Temp method.
+        gameObject.SetActive(false);
     }
 
     public Item GetItem()

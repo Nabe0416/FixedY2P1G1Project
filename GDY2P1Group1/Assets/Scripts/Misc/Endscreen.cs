@@ -5,6 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Endscreen : MonoBehaviour
 {
+    private enum TypeOfUI
+    {
+        EndScreen,
+        Tutorial
+    }
+
+    [SerializeField]
+    private TypeOfUI UiType;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +37,9 @@ public class Endscreen : MonoBehaviour
     private void OnDisable()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(0);
+        if(UiType == TypeOfUI.EndScreen)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }

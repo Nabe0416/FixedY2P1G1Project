@@ -208,7 +208,7 @@ public class LightSystem : MonoBehaviour
 
         foreach(GameObject go in objectList)
         {
-            if(go.GetComponent<EnemyAI>())
+            if(go.GetComponent<EnemyAI>() && go.activeSelf != false)
             {
                 enmL.Add(go.GetComponent<EnemyAI>());
             }
