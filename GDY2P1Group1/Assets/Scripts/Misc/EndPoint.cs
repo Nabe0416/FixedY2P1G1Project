@@ -35,6 +35,6 @@ public class EndPoint : MonoBehaviour
     void GameRestart()
     {
         //GameEnd();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Final");
     }
 }
