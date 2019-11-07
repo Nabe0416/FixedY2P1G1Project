@@ -23,6 +23,9 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     private bool TestOnly;
 
+    [SerializeField]
+    private GameObject DeathScreen;
+
     private void Start()
     {
         #region Refs.
@@ -95,6 +98,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void GetKilled()
     {
-        SceneManager.LoadScene(0);
+        //SceneManager.LoadScene(0);
+        DeathScreen.SetActive(true);
     }
 }
