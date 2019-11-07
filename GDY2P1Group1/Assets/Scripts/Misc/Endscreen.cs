@@ -39,7 +39,7 @@ public class Endscreen : MonoBehaviour
         Time.timeScale = 1;
         if(UiType == TypeOfUI.EndScreen)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("Final");
         }
     }
 }
