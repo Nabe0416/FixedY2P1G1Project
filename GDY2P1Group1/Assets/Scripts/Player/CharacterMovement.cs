@@ -31,7 +31,6 @@ public class CharacterMovement : MonoBehaviour
         #region Refs.
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         inv = FindObjectOfType<Inventory>();
-        //DeathScreen = FindObjectOfType<deathscreen>().gameObject;
         #endregion
         AdjustRb();
     }
