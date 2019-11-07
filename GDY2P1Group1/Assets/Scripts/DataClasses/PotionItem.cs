@@ -18,19 +18,7 @@ public class PotionItem : ThrowableItem
             {
                 effectCollider(gameObject);
             }
-            thrown = false;
-            targetTime -= 1;
-            if (targetTime <= 0) 
-            {
-                destroyEffect(gameObject);
-            }
         }
-    }
-
-    public void destroyEffect(GameObject gameObject)
-    {
-        Destroy(gameObject);
-        targetTime  = 420;
     }
 
     private void effectCollider(GameObject gameObject)
@@ -39,6 +27,5 @@ public class PotionItem : ThrowableItem
         gameObject.GetComponent<CircleCollider2D>().radius = 2.0f;
         gameObject.AddComponent<ParticleSystem>();
         thrown = false;
-        effectDown = false;
     }
 }

@@ -6,6 +6,7 @@ public class AreaEffect : MonoBehaviour
 {
     private bool damageTick = false;
     private float damageTime = 120;
+    private float potionTime = 420;
 
     [SerializeField]
     private List<EnemyAI> enemylist = new List<EnemyAI>();
@@ -38,6 +39,11 @@ public class AreaEffect : MonoBehaviour
         }
     }
     private void Update() {
+        potionTime -= 1;
+        if(potionTime <= 0)
+        {
+            destroyEffect(gameObject);
+        }
         if(damageTick){
             damageTime -= 1;
             if(damageTime <= 0) 
@@ -49,6 +55,12 @@ public class AreaEffect : MonoBehaviour
                 damageTime = 120;
             }
         }     
+    }
+    
+    public void destroyEffect(GameObject gameObject)
+    {
+        Destroy(gameObject);
+        PotionItem.effectDown = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
