@@ -28,6 +28,9 @@ public class CharacterMovement : MonoBehaviour
 
     private bool WIsUp = true;
 
+    [SerializeField]
+    private GameObject pressE;
+
     private void Start()
     {
         #region Refs.
@@ -119,5 +122,21 @@ public class CharacterMovement : MonoBehaviour
     public void ChangeWtoFor()
     {
         WIsUp = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.GetComponent<PickUp>() || collision.GetComponent<LightSwitch>())
+        {
+            pressE.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.GetComponent<PickUp>() || collision.GetComponent<LightSwitch>())
+        {
+            pressE.SetActive(false);
+        }
     }
 }
