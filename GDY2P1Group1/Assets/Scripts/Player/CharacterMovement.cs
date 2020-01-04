@@ -26,6 +26,8 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     private GameObject DeathScreen;
 
+    private bool WIsUp = true;
+
     private void Start()
     {
         #region Refs.
@@ -55,9 +57,16 @@ public class CharacterMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
 
-        rb.MovePosition((Vector2)this.transform.position + new Vector2(x, y) * MoveSpeed * Time.deltaTime);
+        if (WIsUp)
+        {
+            rb.MovePosition((Vector2)this.transform.position + new Vector2(x, y) * MoveSpeed * Time.deltaTime);
+        }
+        else
+        {
+            rb.MovePosition((Vector2)this.transform.position + y * dir * MoveSpeed * Time.deltaTime + x * new Vector2(dir.y ,-dir.x) * MoveSpeed * Time.deltaTime);
+        }
 
-        if(x<=0.25&&x>=-0.25&&y<=0.25&&y>=-0.25){
+        if (x<=0.25&&x>=-0.25&&y<=0.25&&y>=-0.25){
             characterSprite.GetComponent<Animator>().SetBool("Moving", false);
         }else{
             characterSprite.GetComponent<Animator>().SetBool("Moving", true);
@@ -100,5 +109,15 @@ public class CharacterMovement : MonoBehaviour
     {
         //SceneManager.LoadScene(0);
         DeathScreen.SetActive(true);
+    }
+
+    public void ChangeWtoUp()
+    {
+        WIsUp = true;
+    }
+
+    public void ChangeWtoFor()
+    {
+        WIsUp = false;
     }
 }
